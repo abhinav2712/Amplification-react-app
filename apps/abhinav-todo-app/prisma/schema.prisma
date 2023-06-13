@@ -65,3 +65,10 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Project {
+  createdAt DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @mongo.ObjectId
+  owners    String?
+  updatedAt DateTime @updatedAt
+}
